@@ -4,7 +4,7 @@ http:\/\/kadian\.nineton\.cn url script-response-body
 */
 var body = $response.body;
 var url = $request.url;
-const path = "/api/v1.user/info";
+const path = "/api/v2/user/status";
 let obj = JSON.parse(body);
 if (url.indexOf(path) != -1) {
 	obj["pro"] = "true";
