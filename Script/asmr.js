@@ -2,9 +2,9 @@
 */
 var body = $response.body;
 var url = $request.url;
-const path1 = "video/api/user/info";
-const path2 = "video/api/video/play";
-const path3 = "video/api/charge/ioslist";
+const path1 = "/video/api/user/info";
+const path2 = "/video/api/video/play";
+const path3 = "/video/api/charge/ioslist";
 if (url.indexOf(path1) != -1) {
 	let obj = JSON.parse(body);
 	obj["Vip"] = "1";
