@@ -1,6 +1,4 @@
-/*卡点视频
-QX：
-http:\/\/kadian\.nineton\.cn url script-response-body 
+/*随手记
 */
 var body = $response.body;
 var url = $request.url;
