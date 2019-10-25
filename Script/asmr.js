@@ -7,7 +7,7 @@ const path2 = "/video/api/video/play";
 const path3 = "/video/api/charge/ioslist";
 if (url.indexOf(path1) != -1) {
 	let obj = JSON.parse(body);
-	obj["Vip"] = "1";
+	obj["vip"] = "1";
 	body = JSON.stringify(obj);
  }
 if (url.indexOf(path2) != -1) {
