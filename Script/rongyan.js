@@ -1,12 +1,25 @@
-/*随手记
+/*猫耳asmr
 */
 var body = $response.body;
 var url = $request.url;
-const path = "/api/user.getDetail.json";
-let obj = JSON.parse(body);
-if (url.indexOf(path) != -1) {
-	obj["isVip"] = "1";
-  	obj["vip_expires"] = "1654037822";
+const path1 = "video/api/user/info";
+const path2 = "video/api/video/play";
+const path3 = "video/api/charge/ioslist";
+if (url.indexOf(path1) != -1) {
+	let obj = JSON.parse(body);
+	obj["Vip"] = "1";
+	body = JSON.stringify(obj);
+ }
+if (url.indexOf(path2) != -1) {
+	let obj = JSON.parse(body);
+	obj["result"] = "100";
+	body = JSON.stringify(obj);
+ }
+if (url.indexOf(path3) != -1) {
+	let obj = JSON.parse(body);
+	obj["result"] = "100";
+  	obj["days"] = "365";
+	obj["effective"] = "true";
 	body = JSON.stringify(obj);
  }
 $done({body});
