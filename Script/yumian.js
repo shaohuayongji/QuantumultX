@@ -3,7 +3,7 @@ var url = $request.url;
 const path1 = "/api/sounds";
 if (url.indexOf(path1) != -1) {
 	let obj = JSON.parse(body);
-	obj.data.vip = "false";
+	obj.data["vip"] = "false";
 	body = JSON.stringify(obj);
  }
 $done({body});
